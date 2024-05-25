@@ -10,7 +10,8 @@ body {
   color: #fff;
   --primary-color: #ff3030;
   --secondary-color: #ddd;
-  --text-variable: "Inter", sans-serif;
+  --text-font: "Inter", sans-serif;
+  font-family: var(--text-font);
 }
 
 * {
@@ -61,7 +62,7 @@ nav {
 
 /*Head*/
 
-.headline-main-div {
+.headline-main {
   width: auto;
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     url("assets/hero.jpg");
@@ -85,7 +86,6 @@ nav {
 .headline-text {
   color: var(--secondary-color);
   font-size: 20px;
-  font-family: var(--text-variable);
 }
 
 .headline-link {
@@ -95,7 +95,7 @@ nav {
 
 /*Über uns*/
 
-.über-uns-main-div {
+.über-uns-main {
   width: 700px;
   margin: 1rem auto;
   height: 40vh;
@@ -122,7 +122,6 @@ nav {
   color: var(--secondary-color);
   font-size: 1rem;
   margin-bottom: 2rem;
-  font-family: var(--text-variable);
 }
 
 .über-uns-link {
@@ -138,7 +137,7 @@ nav {
 
 .über-uns-section2-img1 {
   width: auto;
-  height: 900%;
+  height: 100%;
 }
 
 .über-uns-section2-childsection {
@@ -159,7 +158,7 @@ nav {
 
 /*opentime*/
 
-.opentime-main-div {
+.opentime-main {
   margin: 0 auto;
   padding: 0;
   background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
@@ -182,7 +181,7 @@ nav {
   margin-bottom: 2rem;
 }
 
-.opentime-child-section-div {
+.opentime-child-section {
   display: flex;
   justify-content: space-around;
   gap: 10rem;
@@ -201,14 +200,13 @@ nav {
 .open-worktime {
   font-size: 1.3rem;
   margin-bottom: 0.5rem;
-  font-family: var(--text-variable);
 }
 
 .work-days {
   color: var(--secondary-color);
 }
 
-.contact-main-div {
+.contact-main {
   margin: 0 auto;
   padding-left: 7rem;
   width: 800px;
@@ -245,7 +243,6 @@ nav {
 .contact-child-section-info {
   color: var(--secondary-color);
   margin-bottom: 1rem;
-  font-family: var(--text-variable);
 }
 
 .contact-child-section-link-button-section {
@@ -275,7 +272,7 @@ nav {
   color: white;
 }
 
-.footer-main-div {
+.footer-main {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -295,7 +292,6 @@ nav {
 .footer-link {
   text-transform: uppercase;
   border: none;
-  font-family: var(--text-variable);
   font-size: 1.5rem;
   background-color: rgb(38, 38, 38);
   color: var(--secondary-color);
@@ -314,7 +310,7 @@ nav {
     padding: 1rem 1.5rem;
   }
 
-  .über-uns-main-div {
+  .über-uns-main {
     padding: 2rem 2rem;
     width: auto;
     margin: 0 auto;
@@ -362,7 +358,7 @@ nav {
     height: auto;
   }
 
-  .opentime-main-div {
+  .opentime-main {
     height: 40vh;
     display: flex;
     flex-direction: column;
@@ -375,7 +371,7 @@ nav {
     margin-bottom: 0.8rem;
   }
 
-  .opentime-child-section-div {
+  .opentime-child-section {
     gap: 6rem;
   }
 
@@ -383,7 +379,7 @@ nav {
     font-size: 1rem;
   }
 
-  .contact-main-div {
+  .contact-main {
     margin: auto;
     width: auto;
     display: flex;
@@ -432,7 +428,7 @@ nav {
     align-items: center;
   }
 
-  .footer-main-div {
+  .footer-main {
     display: flex;
     width: auto;
     flex-direction: column;
@@ -474,7 +470,7 @@ nav {
     padding: 1rem 2rem;
   }
 
-  .über-uns-main-div {
+  .über-uns-main {
     padding: 1rem;
     margin: 0 4rem;
     width: auto;
@@ -531,7 +527,7 @@ nav {
     height: auto;
   }
 
-  .opentime-main-div {
+  .opentime-main {
     height: 50vh;
   }
 
@@ -541,7 +537,7 @@ nav {
     margin-bottom: 1rem;
   }
 
-  .opentime-child-section-div {
+  .opentime-child-section {
     gap: 8rem;
   }
 
@@ -549,29 +545,30 @@ nav {
     font-size: 1.2rem;
   }
 
-  .contact-main-div {
+  .contact-main {
     width: auto;
-    margin: 0 auto;
+    margin: auto;
     gap: 5rem;
-    padding-left: 6rem;
     height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
   }
 
   .contact-img {
-    margin-top: 3rem;
-    margin-bottom: 3rem;
+    margin: 3rem 0rem;
     width: 50%;
   }
 
   .contact-child-section {
     width: 50%;
-    height: auto;
-    margin: 2rem;
+    margin: 3rem 0rem;
   }
 
   .contact-child-section-headline {
     width: fit-content;
-    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
   }
 
   .contact-child-section-info {
@@ -592,21 +589,17 @@ nav {
     width: auto;
     max-width: 15rem;
     padding: 0.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
   }
 
   .contact-child-section-contact-mail {
     width: auto;
     max-width: 15rem;
     padding: 0.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
   }
 
-  .footer-main-div {
+  .footer-main {
     display: flex;
     flex-direction: column;
   }
@@ -629,7 +622,7 @@ nav {
     font-size: 6rem;
   }
 
-  .über-uns-main-div {
+  .über-uns-main {
     margin: 1rem auto;
     padding: 5rem 5rem;
     width: 800px;
@@ -697,7 +690,7 @@ nav {
     font-size: 2rem;
   }
 
-  .opentime-child-section-div {
+  .opentime-child-section {
     gap: 10rem;
   }
 
@@ -705,18 +698,20 @@ nav {
     font-size: 1.2rem;
   }
 
-  .contact-main-div {
-    margin: 0 auto;
-    width: 900px;
+  .contact-main {
+    margin: auto;
+    width: auto;
     height: 55vh;
   }
 
   .contact-img {
+    height: 75%;
     width: 50%;
   }
 
-  .contact-child-section-collect-section {
+  .contact-child-section {
     display: flex;
+    height: 75%;
     flex-direction: column;
   }
 
@@ -724,13 +719,14 @@ nav {
     text-transform: uppercase;
     border-bottom: 1px solid var(--primary-color);
     width: fit-content;
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
     font-size: 1.5rem;
   }
 
   .contact-child-section-info {
     color: var(--secondary-color);
     margin-bottom: 1rem;
+    font-size: 1rem;
     font-family: var(--text-variable);
   }
 
